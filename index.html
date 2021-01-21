@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <link rel="stylesheet" href="assets/css/stylesheet.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   </head>
+   <body>
+      <header>
+      </header>
+      <div class="banner">
+      </div>
+      <div class="AboutMe">
+         <h1>ABOUT ME</h1>
+         <div class="row2">
+            <div class="c4">
+               <img src="assets/img/Suited-Hero3.png" alt="">
+            </div>
+            <div class="c4">
+               <ul class="menu-dots">
+                  <li><strong>Name  :</strong> Raffael Imannu Rangga Bestara</li>
+                  <li><strong>Website :</strong> raffaelbestara.github.io/Aksara/</li>
+                  <li><strong>Phone :</strong> 085230640604</li>
+                  <li><strong>City :</strong> Samarinda, Kalimantan Timur</li>
+               </ul>
+               <div class="Education">
+                  <h2>Education</h2>
+                  <p><strong>MAJORING IN SOFTWARE ENGINEERING</strong></p>
+                  <p><span class="school">Vocational School 7, Samarinda, Kaltim</span></p>
+                  <p><span class="year">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2019 - Present&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span></p>
+                  <ul class="dothis">
+                     <li>Learning about the basic of computer science and software engineering</li>
+                     <li>Learning about graphic designing and photo editing</li>
+                     <li>Attending an field industrial practice at the Governor's Office</li>
+                     <li>Finishing HTML, CSS, JavaScript, and PHP Course on Progate</li>
+                     <li>Creating a landing page for Progate final project</li>
+                  </ul>
+               </div>
+               <div class="Xper">
+                  <h2>Experience</h2>
+                  <p><strong>WORKING EXPERIENCE</strong></p>
+                  <ul>
+                     <li>Pharmacy Hardware Consultant <strong> 2019 - 2020</strong></li>
+                     <li>Making logos for customers on Fiverr <strong> 2020 - Present</strong></li>
+                     <li>Working at Pasalans Entertainment as a Lead Graphic desinger<strong> 2020 - Present</strong></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="c4">
+               <ul class="menu-dots">
+                  <li><strong>Age :</strong> 16</li>
+                  <li><strong>Major :</strong> Software Engineering</li>
+                  <li><strong>Email :</strong> RaffaelBestara@gmail.com</li>
+                  <li><strong>Freelance :</ strong> Available</li>
+               </ul>
+               <div class="Certification">
+                  <h2>Certification</h2>
+                  <p><strong>PROGATE PROGRAMMING COURSE</strong></p>
+                  <p><span class="school">https://progate.com/</span></p>
+                  <p><span class="year">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2020 - 2021&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span></p>
+                  <img id="myImg" src="assets/img/Certificate of Completion.jpg" alt="Certificate of Completion" style="width:100%;max-width:300px">
+                  <div id="myModal" class="modal">
+                     <span class="close">&times;</span>
+                     <img class="modal-content" id="img01">
+                     <div id="caption"></div>
+                  </div>
+               </div>
+               <script>
+                  var modal = document.getElementById("myModal");
+                  var img = document.getElementById("myImg");
+                  var modalImg = document.getElementById("img01");
+                  var captionText = document.getElementById("caption");
+                  img.onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt;
+                    var span = document.getElementsByClassName("close")[0];
+                    span.onclick = function() {
+                      modal.style.display = "none";
+                    }
+                  }
+               </script>
+            </div>
+         </div>
+         <div class="skill-back">
+            <div class="my-skills">
+               <h1>My Skills</h1>
+               <div class="row2">
+                  <div class="c6">
+                     <img src="assets/img/hero.png" alt="">
+                  </div>
+                  <div class="c6">
+                     <div class="skills">
+                        <div class="skill">
+                           <div class="skill-name">HTML</div>
+                           <div class="skill-bar">
+                              <div class="skill-per" per="100"></div>
+                           </div>
+                        </div>
+                        <div class="skill">
+                           <div class="skill-name">CSS</div>
+                           <div class="skill-bar">
+                              <div class="skill-per" per="85"></div>
+                           </div>
+                        </div>
+                        <div class="skill">
+                           <div class="skill-name">Javascript</div>
+                           <div class="skill-bar">
+                              <div class="skill-per" per="65"></div>
+                           </div>
+                        </div>
+                        <div class="skill">
+                           <div class="skill-name">Adobe Photoshop</div>
+                           <div class="skill-bar">
+                              <div class="skill-per" per="80"></div>
+                           </div>
+                        </div>
+                        <div class="skill">
+                           <div class="skill-name">Autodesk 3ds</div>
+                           <div class="skill-bar">
+                              <div class="skill-per" per="35"></div>
+                           </div>
+                        </div>
+                        <div class="skill">
+                           <div class="skill-name">CorelDraw</div>
+                           <div class="skill-bar">
+                              <div class="skill-per" per="100"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <script>
+                        $('.skill-per').each(function(){
+                          var $this = $(this);
+                          var per = $this.attr('per');
+                          $this.css("width",per+'%');
+                          $({animatedValue: 0}).animate({animatedValue: per},{
+                            duration: 1000,
+                            step: function(){
+                              $this.attr('per', Math.floor(this.animatedValue) + '%');
+                            },
+                            complete: function(){
+                              $this.attr('per', Math.floor(this.animatedValue) + '%');
+                            }
+                          });
+                        });
+                     </script>
+                  </div>
+               </div>
+            </div>
+            <div class="PORTOFOLIO">
+               <h1>PORTOFOLIO</h1>
+               <div id="myBtnContainer">
+                  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                  <button class="btn" onclick="filterSelection('poster')"> poster</button>
+                  <button class="btn" onclick="filterSelection('logo')"> logo</button>
+                  <button class="btn" onclick="filterSelection('digart')"> Digital Art</button>
+               </div>
+               <!-- Portfolio Gallery Grid -->
+               <div class="row">
+                  <div class="column poster">
+                     <div class="content">
+                        <img src="assets/img/Public Service Poster2.png" alt="Public Service Poster2" style="width:100%">
+                     </div>
+                  </div>
+                  <div class="column poster">
+                     <div class="content">
+                        <img src="assets/img/Insurance Poster2.jpg" alt="Insurance Poster2" style="width:100%">
+                     </div>
+                  </div>
+                  <div class="column poster">
+                     <div class="content">
+                        <img src="assets/img/Book Cover.jpg" alt="Book Cover2" style="width:100%">
+                     </div>
+                  </div>
+                  <div class="column digart">
+                     <div class="content">
+                        <img src="assets/img/Dasha_Taran_Digital_Paint2.png" alt="Dasha Taran" style="width:100%">
+                     </div>
+                  </div>
+                  <div class="column poster">
+                     <div class="content">
+                        <img src="assets/img/WeddingInv1.png" alt="WeddingInv1.png" style="width:100%">
+                     </div>
+                  </div>
+                  <div class="column poster">
+                     <div class="content">
+                        <img src="assets/img/WeddingInv2.png" alt="WeddingInv2.png" style="width:100%">
+                     </div>
+                  </div>
+                  <div class="column digart">
+                     <div class="content">
+                        <img src="assets/img/Kristina_Pimenova_Digital-Paint2.png" alt="Kristina Pimenova" style="width:100%">
+                     </div>
+                  </div>
+                  <div class="column poster">
+                     <div class="content">
+                        <img src="assets/img/COVID1.png" alt="COVID-19 Poster" style="width:100%">
+                     </div>
+                  </div>
+                  <div class="column poster">
+                     <div class="content">
+                        <img src="assets/img/COVID2.png" alt="COVID-19 Poster" style="width:100%">
+                     </div>
+                  </div>
+                  <script>
+                     filterSelection("all") // Execute the function and show all columns
+                     function filterSelection(c) {
+                     var x, i;
+                     x = document.getElementsByClassName("column");
+                     if (c == "all") c = "";
+                     // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+                     for (i = 0; i < x.length; i++) {
+                     w3RemoveClass(x[i], "show");
+                     if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                     }
+                     }
+
+                     // Show filtered elements
+                     function w3AddClass(element, name) {
+                     var i, arr1, arr2;
+                     arr1 = element.className.split(" ");
+                     arr2 = name.split(" ");
+                     for (i = 0; i < arr2.length; i++) {
+                     if (arr1.indexOf(arr2[i]) == -1) {
+                     element.className += " " + arr2[i];
+                     }
+                     }
+                     }
+
+                     // Hide elements that are not selected
+                     function w3RemoveClass(element, name) {
+                     var i, arr1, arr2;
+                     arr1 = element.className.split(" ");
+                     arr2 = name.split(" ");
+                     for (i = 0; i < arr2.length; i++) {
+                     while (arr1.indexOf(arr2[i]) > -1) {
+                     arr1.splice(arr1.indexOf(arr2[i]), 1);
+                     }
+                     }
+                     element.className = arr1.join(" ");
+                     }
+
+                     // Add active class to the current button (highlight it)
+                     var btnContainer = document.getElementById("myBtnContainer");
+                     var btns = btnContainer.getElementsByClassName("btn");
+                     for (var i = 0; i < btns.length; i++) {
+                     btns[i].addEventListener("click", function(){
+                     var current = document.getElementsByClassName("active");
+                     current[0].className = current[0].className.replace(" active", "");
+                     this.className += " active";
+                     });
+                     }
+                  </script>
+                  <!-- END GRID -->
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      </div>
+   </body>
+</html>
